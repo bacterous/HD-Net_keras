@@ -1,5 +1,5 @@
 import numpy as np
-from keras.models import Input, Model
+from tensorflow.python.keras.models import Input, Model
 
 from modules import *
 
@@ -14,6 +14,8 @@ def HD_Net(input_shape, classes, levels, modules, filters, dilations, scales):
         x_pre, output = hierarchical_layer(n_level, n_filter, classes, n_module, dilation, scale)(x_pre)
         print('level:', n_level, 'output:',output.shape, 'x_pre:', x_pre.shape)
         x.append(output)
+
+    x = concatenate(x, axis=1)
 
     x = fusion(32, classes)(x)
 

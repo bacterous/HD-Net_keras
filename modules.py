@@ -1,9 +1,9 @@
 import numpy as np
 
-from keras.layers import Activation, BatchNormalization
-from keras.layers.convolutional import Conv3D, MaxPooling3D, Conv3DTranspose
-from keras.layers.merge import add, concatenate
-from keras import backend as K
+from tensorflow.python.keras.layers import Activation, BatchNormalization, Reshape
+from tensorflow.python.keras.layers.convolutional import Conv3D, MaxPooling3D, Conv3DTranspose
+from tensorflow.python.keras.layers.merge import add, concatenate
+from tensorflow.python.keras import backend as K
 
 DATA_FORMAT = 'channels_first'
 
@@ -104,11 +104,9 @@ def tail(filters, classes, scale=1, dilation=1):
     input -> building_block -> (up sampling ->) building_block -> 1*1 conv -> n_classes output
     """
     def layer(x):
-        print('input', x.shape)
         x = building_block(filters, dilation)(x)
         if scale > 1:
             x = Conv3DTranspose(filters, kernel_size=scale, strides=scale, data_format=DATA_FORMAT)(x)
-        print('up sample:', x.shape)
         x = building_block(int(filters/2), dilation)(x)
         x = Conv3D(classes, 1, data_format=DATA_FORMAT)(x)
 
@@ -124,10 +122,8 @@ def fusion(filters, classes):
           ↘  max  ↗
     """
     def layer(x):
-        print(np.array(x).shape)
-        x_mean = K.mean(x, axis=2)
-        x_max = K.max(x, axis=2)
-        x = x.view(x.shape[0], -1, x.shape[3], x.shape[4], x.shape[5])
+        x_mean = K.expand_dims(K.mean(x, axis=1), axis=1)
+        x_max = K.expand_dims(K.max(x, axis=1), axis=1)
         x = concatenate([x, x_mean, x_max], axis=1)
         x = building_block(filters)(x)
         x = Conv3D(classes, 1, data_format=DATA_FORMAT)(x)

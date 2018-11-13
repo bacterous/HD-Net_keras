@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53a01057-d368-4544-bb5c-e1a4ed022afb" name="Default Changelist" comment="" />
+    <list default="true" id="53a01057-d368-4544-bb5c-e1a4ed022afb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HD-Net.py" beforeDir="false" afterPath="$PROJECT_DIR$/HD-Net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,7 @@
     <session id="487868770">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -66,20 +72,37 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="97938418">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="180" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="180" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-393">
-              <caret line="111" column="55" lean-forward="true" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+            <state relative-caret-position="-103">
+              <caret line="126" column="51" lean-forward="true" selection-start-line="126" selection-start-column="51" selection-end-line="126" selection-end-column="51" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1542095540686" expanded="true" signature="231:266" ph="..." />
-                <marker date="1542095540686" expanded="true" signature="388:393" ph="..." />
-                <marker date="1542095540686" expanded="true" signature="2998:3127" ph="..." />
-                <marker date="1542095540686" expanded="true" signature="3575:3891" ph="..." />
+                <marker date="1542098618094" expanded="true" signature="312:347" ph="..." />
+                <marker date="1542098618094" expanded="true" signature="469:474" ph="..." />
+                <marker date="1542098618094" expanded="true" signature="3010:3139" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,11 +111,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HD-Net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="197">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1542095445338" expanded="true" signature="160:165" ph="..." />
+                <marker date="1542097944361" expanded="true" signature="178:183" ph="..." />
               </folding>
             </state>
           </provider>
@@ -114,6 +137,9 @@
       <find>pooling</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -128,12 +154,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-89" />
-    <option name="y" value="43" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="300" />
+    <option name="y" value="16" />
     <option name="width" value="1060" />
     <option name="height" value="845" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -144,7 +171,7 @@
           <expand>
             <path>
               <item name="HD-Net_tensorflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HD-Net_tensorflow" type="462c0819:PsiDirectoryNode" />
+              <item name="HD-Net_keras" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,13 +213,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14818764" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14978679" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2537961" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.25407165" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.3286517" />
@@ -243,25 +270,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HD-Net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="197">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1542095445338" expanded="true" signature="160:165" ph="..." />
+            <marker date="1542097944361" expanded="true" signature="178:183" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-393">
-          <caret line="111" column="55" lean-forward="true" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+        <state relative-caret-position="-103">
+          <caret line="126" column="51" lean-forward="true" selection-start-line="126" selection-start-column="51" selection-end-line="126" selection-end-column="51" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1542095540686" expanded="true" signature="231:266" ph="..." />
-            <marker date="1542095540686" expanded="true" signature="388:393" ph="..." />
-            <marker date="1542095540686" expanded="true" signature="2998:3127" ph="..." />
-            <marker date="1542095540686" expanded="true" signature="3575:3891" ph="..." />
+            <marker date="1542098618094" expanded="true" signature="312:347" ph="..." />
+            <marker date="1542098618094" expanded="true" signature="469:474" ph="..." />
+            <marker date="1542098618094" expanded="true" signature="3010:3139" ph="..." />
           </folding>
         </state>
       </provider>
