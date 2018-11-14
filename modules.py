@@ -1,6 +1,6 @@
 import numpy as np
 
-from tensorflow.python.keras.layers import Activation, BatchNormalization, Reshape
+from tensorflow.python.keras.layers import Activation, BatchNormalization, Lambda
 from tensorflow.python.keras.layers.convolutional import Conv3D, MaxPooling3D, Conv3DTranspose
 from tensorflow.python.keras.layers.merge import add, concatenate
 from tensorflow.python.keras import backend as K
@@ -66,7 +66,9 @@ def hierarchical_dilated_module(filters, modules, dilation):
         output.append(x)
 
         for i in range(modules):
-            output.append(dilated_res_block(filters, dilation[i])(output[i]))
+            x = dilated_res_block(filters, dilation[i])(output[i])
+            x = dilated_res_block(filters, dilation[i])(x)
+            output.append(x)
 
         return concatenate(output, axis=1)
 
