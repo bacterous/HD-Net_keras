@@ -2,9 +2,9 @@
 Reproduce HD-Net (Hierarchical Dilated Network) with Keras
 
 ## Model
-![](model_graph.png)
+![](images/model_graph.png)
 #### Plotted by `keras.utils.vis_utils.plot_model()`:
-![](model.png)
+![](images/model.png)
 
 
 ## Reference
