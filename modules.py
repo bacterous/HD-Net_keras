@@ -133,14 +133,14 @@ def fusion(filters, classes):
     return layer
 
 
-def hierarchical_layer(level, filters, classes, modules, dilation, scale):
+def hierarchical_layer(level, filters, classes, modules, dilation):
     def layer(x):
         if level==0:
             x_pre = head(filters, dilation)(x)
         else:
             x_pre = down(filters, dilation)(x)
         x = hierarchical_dilated_module(filters, modules, dilation)(x_pre)
-        x = tail(64, classes, scale)(x)
+        x = tail(64, classes, int(2*level))(x)
 
         return x_pre, x
 

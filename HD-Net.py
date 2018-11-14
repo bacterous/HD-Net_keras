@@ -7,14 +7,24 @@ from tensorflow.python.keras.utils.vis_utils import plot_model
 from modules import *
 
 
-def HD_Net(input_shape, classes, levels, modules, filters, dilations, scales):
+def HD_Net(input_shape, classes, levels, modules, filters, dilations):
+    """
+    Builds a custom HD_Net model.
+    :param input_shape: input shape, tuple, (channels, depth, rows, cols)
+    :param classes: segmentation region types, int
+    :param levels: number of hierarchical layers, int
+    :param modules: number of residual dilated convolutional block in each hierarchical layer, array like, len(modules)==levels
+    :param filters: filters in each hierarchical layer, array like, len(filters)==levels
+    :param dilations: dilation rate of each residual dilated convolutional block, array like, dilations.shape=(levels, modules)
+    :return: segmentation result, tensor, (batch, classes, depth, rows, cols)
+    """
     input = Input(shape=input_shape)
 
     x = []
     x_pre = input
 
-    for n_level, n_module, n_filter, dilation, scale in zip(np.arange(levels), modules, filters, dilations, scales):
-        x_pre, output = hierarchical_layer(n_level, n_filter, classes, n_module, dilation, scale)(x_pre)
+    for n_level, n_module, n_filter, dilation in zip(np.arange(levels), modules, filters, dilations):
+        x_pre, output = hierarchical_layer(n_level, n_filter, classes, n_module, dilation)(x_pre)
         print('level:', n_level, 'output:',output.shape, 'x_pre:', x_pre.shape)
         x.append(output)
 
@@ -33,5 +43,5 @@ if __name__=='__main__':
     filters = [32, 48, 72]
     dilations = [[1, 3, 5], [1, 2, 4], [1, 2, 2]]
     scales = [1, 2, 4]
-    model = HD_Net(input_shape, classes, levels, modules, filters, dilations, scales)
+    model = HD_Net(input_shape, classes, levels, modules, filters, dilations)
     plot_model(model, 'model.png', show_shapes=True)
