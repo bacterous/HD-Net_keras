@@ -1,6 +1,4 @@
-import numpy as np
-
-from tensorflow.python.keras.layers import Activation, BatchNormalization, Lambda
+from tensorflow.python.keras.layers import Activation, BatchNormalization
 from tensorflow.python.keras.layers.convolutional import Conv3D, MaxPooling3D, Conv3DTranspose
 from tensorflow.python.keras.layers.merge import add, concatenate
 from tensorflow.python.keras import backend as K

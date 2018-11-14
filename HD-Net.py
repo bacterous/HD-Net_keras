@@ -1,4 +1,5 @@
-import keras
+import numpy as np
+
 from tensorflow.python.keras.models import Input, Model
 from tensorflow.python.keras.layers import Lambda
 from tensorflow.python.keras.utils.vis_utils import plot_model
